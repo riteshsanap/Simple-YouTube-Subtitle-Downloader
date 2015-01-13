@@ -1,0 +1,222 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=windows-1252" />
+<meta name="keywords" content="Google2SRT, download, conversão, legendas, YouTube, SRT, Closed Captions, Google, vídeo" />
+<meta name="description" content="O Google2SRT baixa e converte legendas do YouTube e Google Video" />
+<link rel="stylesheet" href="../style.css" />
+<title>Google2SRT - Baixe e converta legendas do YouTube e Google Video - Ajuda</title>
+</head>
+<body bgcolor="#A6BFE6" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<br><br>
+<table border="0" width="100%">
+<tr>
+<td width="3%"></td>
+<td valign="top" width="84%">
+    <div class="cos">
+	<b>
+	<a href="#install" class="link2">Instalação</a>&nbsp;&nbsp;&nbsp;
+	<a href="#use" class="link2">Como usar</a>&nbsp;&nbsp;&nbsp;
+	<a href="#trouble" class="link2">Solução de problemas</a>&nbsp;&nbsp;&nbsp;
+	<a href="#manual_download" class="link2">Download Manual</a>&nbsp;&nbsp;&nbsp;
+	</b>
+
+	<br><br><br><br>
+    <a name="install"><b>Instalação</b></a><br>
+	<span style="background-color:white"><span class="vn">OUTDATED!</span> Please check in <b><a href="../en/help.html" class="link">English</a></b> for more accurate documentation. Sorry for any inconvenience.</span>
+    <ol>
+	<li>Verifique se seu sistema possui o <b>Java versão 1.5 ou superior</b> instalado. Você pode baixá-lo em
+	<a href="http://www.java.com" class="link2" target="_blank">http://www.java.com</a>.</li>
+	<li><b>Baixe</b> o arquivo ZIP na <a href="download.html" class="link2">seção de downloads</a>.</li>
+	<li><b>Descompacte</b> o arquivo ZIP onde quiser. Se você não conseguir fazê-lo, baixe um compactador de arquivos, como o
+	<a href="http://www.7-zip.org" class="link2" target="_blank">7-Zip</a>.</li>
+	<li>
+	<b>Pronto!</b> Agora você só precisa lembrar que:<br>
+	a. Se você usa o <b>Windows</b>, abra o arquivo <b>run.bat</b> <img src="../img/batch.gif" alt="batch file"> ou <b>Google2SRT.jar</b> <img src="../img/jar.png" alt="JAR file">.<br><br>
+	b. Se você usa o <b>GNU/Linux</b>, abra o arquivo <b>run.sh</b>. <img src="../img/sh.png" alt="shell script"><br>
+	c. Se você usa <b>outro sistema</b>, execute este comando no terminal ou similar: "<b>java -jar Google2SRT.jar</b>".
+	Espero que os usuários do MacOS me perdoem...
+	</li>
+	</ol>
+    <br><br>
+	<a name="use"><b>Como usar</b></a><br>
+	<span style="background-color:white"><span class="vn">OUTDATED!</span> Please check in <b><a href="../en/help.html" class="link">English</a></b> for more accurate documentation. Sorry for any inconvenience.</span>
+	<ul>
+	<li>Você pode <b>mudar o idioma</b> clicando nas bandeiras: <img src="../img/ca.jpg" alt="cat">, <img src="../img/en.jpg" alt="eng">, <img src="../img/es.jpg" alt="esp">...</li>
+	<br>
+	<li>Você pode escolher o <b>método</b> a ser utilizado: Web ou Arquivo XML. Normalmente, utiliza-se o método Web.<br>
+	O método <b>Web</b> converte as legendas apenas colocando o endereço do vídeo (URL) na caixa de texto <b>"Legendas do Google"</b>.<br>
+	Usando o método <b><i>Arquivo XML</i></b> você deve primeiro baixar manualmente o arquivo das legendas. É uma opção antiga, está lá para "emergências".</li>
+	<br>
+	<li>Com o <b>método Web</b>, você pode obter uma <b>lista de legendas</b> (painel inferior) do vídeo escolhido clicando no botão <b>"Read"</b>.<br>
+	No <b>método Arquivo XML</b> não há uma lista de legendas (há apenas um conjunto de legendas (idioma, por exemplo) por arquivo).
+	O botão <b>"Arquivo..."</b> (topo) lhe permite selecionar o arquivo de origem.
+	</li>
+	<br>
+	<li>Você pode escolher <b>onde deseja salvar</b> as legendas na caixa de texto <b>"Legendas SRT"</b> ou no botão <b>"Arquivo..."</b> (meio).</li>
+	<br>
+	<li>Você pode <b>selecionar as legendas a serem convertidas</b> na lista (painel inferior, <b>Tracks</b>). A opção <b>"Todas"</b> seleciona todas as legendas.
+	<b>"Inverter"</b> inverte a seleção atual.
+	</li>
+	<br>
+	<li>Você pode <b>selecionar qual legenda traduzida deseja converter</b> a partir da lista (painel inferior, <b>Traduções</b>).
+	Você deve selecionar uma <b>"Fonte"</b>. <u>Sugestão</u>: evite a fonte "ASR" o máximo possível.
+	</li>
+	<br>
+	<li>Eventualmente, você pode precisar <b>sincronizar as legendas</b>. A caixa de texto <b>"Atraso (segundos)"</b> adianta as legendas com a quantidade de
+	segundos determinados (se o valor for positivo). Para obter o efeito contrário, adiantar as legendas, digite valores negativos.<br>
+	<br>
+	<b>Exemplo</b>: Se as legendas aparecerem 6.25 segundos antes do esperado, deve-se adiantá-las 6.25 segundos. Se as legendas aparecerem 3.70 segundos depois do
+	esperado, deve-se adiantá-las adicionando um atraso de -3.70 segundos.
+	</li>
+	<br>
+	<li>O botão <b>"Converter!"</b> inicia o processo de conversão. Se houver muitas legendas (uma ou duas horas de vídeo, aproximandamente 180 KB da SRT)
+	serão necessários aproximadamente 5 segundos.</li>
+	</ul>
+	<br><br>
+	<a name="trouble"><b>Solução de problemas</b></a><br>
+	<ul>
+	<li>
+	<b>Problema</b>: Eu usei o método Web e coloquei uma URL válida com legendas mas não aparece nenhuma lista de legendas,
+	aparece uma lista de legendas mas não consigo convertê-las, recebo um erro desconhecido ou a aplicação fecha subitamente...<br>
+	<b>Solução</b>: Talvez o método de obtenção de legendas tenha mudado. Você deve esperar por uma versão mais nova ou pode tentar baixar as legendas
+	manualmente (com a ajuda de um detector).
+	</li>
+	<br>
+	<li>
+	<b>Problema</b>: Eu recebo mensagens de erro sem sentido quando uma URL não está correta ou há um erro de rede.<br>
+	<b>Solução</b>: Por enquanto, seja paciente até que apareça uma versão mais nova...
+	</li>
+	</ul>
+	<br><br>
+	<a name="manual_download"><b>Download manual</b></a><br>
+	O que fazer quando o Google2SRT não for capaz de baixar as legendas? Deve-se baixá-las manualmente e convertê-las com a opção "Arquivo XML".
+	<span class="vn" style="background-color:white;text-decoration:line-through">Atualmente é necessário usar este método quando se quer baixar as traduções oferecidas pelo YouTube das legendas originais.</span><br><br>
+
+
+	<span style="font-size:14px; font-weight: bold"><i>YouTube</i></span><br>
+	Temos o link de um vídeo como este:<br>
+	<div class="codi"> http://www.youtube.com/watch?<b>v=<span class="vn">XraeBDMm2PM</span></b> </div><br><br>
+
+	1. Com o parâmetro <span class="codi">v</span> podemos ver a lista de legendas <b>reais</b> disponíveis acessando este link:<br>
+	<div class="codi"> http://video.google.com/timedtext?type=list&amp;<b>v=<span class="vn">XraeBDMm2PM</span></b> </div><br><br>
+
+	2a. Podemos ver um código XML parecido com o seguinte:<br>
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+	&lt;transcript_list docid="6824816026201807091"&gt;<br>
+	&lt;track id="2" name="<span class="vn">French (fr)</span>" lang_code="<span class="vn">fr</span>" lang_original="Français" lang_translated="French"/&gt;<br>
+
+	&lt;track id="0" name="<span class="vn">German (de)</span>" lang_code="<span class="vn">de</span>" lang_original="Deutsch" lang_translated="German"/&gt;<br>
+	&lt;track id="3" name="<span class="vn">Italian (it)</span>" lang_code="<span class="vn">it</span>" lang_original="Italiano" lang_translated="Italian"/&gt;<br>
+	&lt;track id="4" name="<span class="vn">Japanese</span>" lang_code="<span class="vn">ja</span>" lang_original="???" lang_translated="Japanese"/&gt;<br>
+
+	&lt;track id="1" name="<span class="vn">Spanish (es)</span>" lang_code="<span class="vn">es</span>" lang_original="Español" lang_translated="Spanish"/&gt;<br>
+	&lt;/transcript_list&gt;
+	</div><br><br>
+
+	2b. Se existirem legendas no idioma desejado, podemos pular para o <a class="link2" href="#manual_download_yt_3">passo 3</a>. Caso contrário, podemos ver também a lista de legendas <b>traduzidas</b> disponíveis acessando este link:<br>
+
+	<div class="codi"> http://video.google.com/timedtext?type=list&amp;<b>v=<span class="vn">XraeBDMm2PM</span></b>&amp;<b>tlangs=1</b> </div><br><br>
+	
+	2c. Veremos um código XML parecido com este:<br>
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+	&lt;transcript_list docid="6824816026201807091"&gt;<br>
+
+	&lt;<b>target</b> id="42" lang_code="<span class="vn">ca</span>" lang_original="Català" lang_translated="Catalan"/&gt;<br>
+	&lt;<b>track</b> id="2" name="<span class="vn">French (fr)</span>" lang_code="<span class="vn">fr</span>" lang_original="Français" lang_translated="French" <b>cantran="true"</b>/&gt;<br>
+
+	&lt;<b>track</b> id="1" name="<span class="vn">Spanish (es)</span>" lang_code="<span class="vn">es</span>" lang_original="Español" lang_translated="Spanish" <b>cantran="true"</b>/&gt;<br>
+	...<br>
+	&lt;/transcript_list&gt;<br>
+
+	</div><br>
+	As legendas do tipo <span class="codi">&lt;track&gt;</span> e <span class="codi">cantran="true"</span> são reais; as outras (<span class="codi">&lt;target&gt;</span>) são idiomas que podem ser traduzidos a partir de uma das legendas reais. Isto significa que devemos escolher a legenda real a partir da que desejamos traduzir e o idioma que realmente nos interessa. 
+	<br><br>
+
+	 <a name="manual_download_yt_3">3</a>. Obtendo os parâmetros <span class="codi">name</span> e <span class="codi">lang_code</span> da legenda que nos interessa, acessamos:<br>
+
+	Exemplo: legendas em espanhol (<b>legendas reais</b>):<br>
+	<div class="codi"> http://video.google.com/timedtext?type=track&amp;<b>v=<span class="vn">XraeBDMm2PM</span></b>&<b>name=<span class="vn">Spanish (es)</span></b>&amp;<b>lang=<span class="vn">es</span></b> </div><br>
+
+	Exemplo: legendas em catalão (<b>legendas traduzidas a partir do espanhol</b>):<br>
+	<div class="codi"> http://video.google.com/timedtext?type=track&amp;<b>v=<span class="vn">XraeBDMm2PM</span></b>&<b>name=<span class="vn">Spanish (es)</span></b>&amp;<b>lang=<span class="vn">es</span></b>&amp;<b>tlang=<span class="vn">ca</span></b> </div><br>
+
+	Note que o parâmetro <span class="codi">lang_code</span> do arquivo XML anterior é <span class="codi">lang</span> (legenda real) ou <span class="codi">tlang</span> (legenda traduzida) do endereço URL.<br>
+
+	Se algum dos campos <span class="codi">name</span> ou <span class="codi">lang_code</span> estiver em branco no código XML do passo 2/2c, ou seja, aparecer <span class="codi">name=""</span> ou <span class="codi">lang_code=""</span>, colocaremos os parâmetros vazios. <a class="link2" href="#manual_download_gv_3e">Ver exemplo de legenda em inglês em Google Video</a>.<br><br>
+
+	 4. Veremos um arquivo XML como este:
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+	&lt;transcript&gt;<br>
+	&lt;text start="0" dur="1.96"&gt;El Nissan Sunny.&lt;/text&gt;<br>
+	&lt;text start="3" dur="1.48"&gt;No sé por dónde empezar&lt;/text&gt;<br>
+
+	&lt;text start="4.52" dur="3.96"&gt;Quiero decir que hay coches más feos y hay coches peores de conducir, pero ese no es el asunto.&lt;/text&gt;<br>
+	...<br>
+	&lt;/transcript&gt; </div><br><br>
+
+	 5. Salvaremos este arquivo com a extensão XML e então podemos convertê-lo para SRT com o Google2SRT.<br><br><br>
+
+	<span style="font-size:14px; font-weight: bold"><i>Google Video</i></span><br>
+
+	Temos o endereço de um vídeo como este:<br>
+	<div class="codi"> http://video.google.com/videoplay?<b>docid=<span class="vn">-3916654796029228812</span></b> </div><br><br>
+
+	1. Com o parâmetro <span class="codi">docid</span>, podemos ver a lista de legendas disponíveis acessando este link:<br>
+
+	<div class="codi"> http://video.google.com/videotranscript?frame=c&amp;type=list&amp;<b>docid=<span class="vn">-3916654796029228812</span></b> </div><br><br>
+
+	 2. Podemos ver um código XML parecido com este:<br>
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+
+	&lt;transcript_list docid="<span class="vn">-3916654796029228812</span>"&gt;<br>
+	&lt;track id="4" name="<span class="vn">Deutsch</span>" lang_code="<span class="vn">de</span>" lang_original="Deutsch" lang_translated="Alemany" lang_default="true"/&gt;<br>
+	&lt;track id="2" name="<span class="vn"></span>" lang_code="<span class="vn">en</span>" lang_original="English" lang_translated="Anglès" lang_default="true"/&gt;<br>
+
+	&lt;track id="0" name="<span class="vn">???????</span>" lang_code="<span class="vn">ar</span>" lang_original="???????" lang_translated="Àrab" lang_default="true"/&gt;<br>
+	&lt;track id="9" name="<span class="vn">???</span>" lang_code="<span class="vn">ko</span>" lang_original="???" lang_translated="Coreà" lang_default="true"/&gt;<br>
+	&lt;track id="13" name="<span class="vn">Español</span>" lang_code="<span class="vn">es</span>" lang_original="español" lang_translated="Espanyol" lang_default="true"/&gt;<br>
+
+	&lt;track id="3" name="<span class="vn">Français</span>" lang_code="<span class="vn">fr</span>" lang_original="Français" lang_translated="Francès" lang_default="true"/&gt;<br>
+	...<br>
+	&lt;/transcript_list&gt;</div><br><br>
+
+	 3. Com os parâmetros <span class="codi">name</span> e <span class="codi">lang_code</span> da legenda que nos interessa, acessaremos:<br>
+
+	Exemplo: legendas em espanhol:<br>
+	<div class="codi"> http://video.google.com/videotranscript?frame=c&amp;type=track&amp;<b>name=<span class="vn">Español</span></b>&amp;<b>lang=<span class="vn">es</span></b>&amp;<b>docid=<span class="vn">-3916654796029228812</span></b> </div><br>
+
+	<a name="manual_download_gv_3e">Exemplo</a>: legendas em inglês:<br>
+
+	<div class="codi"> http://video.google.com/videotranscript?frame=c&amp;type=track&amp;<b>name=<span class="vn"></span></b>&amp;<b>lang=<span class="vn">en</span></b>&amp;<b>docid=<span class="vn">-3916654796029228812</span></b> </div><br>
+
+	Devemos notar que o parâmetro <span class="codi">lang_code</span> do arquivo XML anterior é o <span class="codi">lang</span> no endereço URL.<br>
+
+	Se algum dos campos <span class="codi">name</span> ou <span class="codi">lang_code</span> do código XML do passo 2 estão em branco, ou seja, aparecer <span class="codi">name=""</span> ou <span class="codi">lang_code=""</span>, enviaremos os parâmetros em branco, como no exemplo das legendas em inglês, onde <span class="codi">name</span> não tem nenhum valor.<br><br>
+
+	 4. Veremos um arquivo XML como este:
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+	&lt;transcript&gt;<br>
+	&lt;text start="1.8" dur="1.95"&gt;Información sobre la amiloidosis.&lt;/text&gt;<br>
+	&lt;text start="5.06" dur="1.29"&gt;¿Qué es la amiloidosis?&lt;/text&gt;<br>
+
+	&lt;text start="6.69" dur="2.97"&gt;La amiloidosis es un grupo de enfermedades en las que muchas clases diferentes&lt;/text&gt;<br>
+	...<br>
+	&lt;/transcript&gt; </div><br><br>
+
+	 5. Salvaremos com a extensão XML e então podemos convertê-lo para SRT com o Google2SRT.<br><br>
+</div>
+
+</td>
+<td width="3%"></td>
+</tr>
+</table>
+<br><br>
+
+</body>
+</html>

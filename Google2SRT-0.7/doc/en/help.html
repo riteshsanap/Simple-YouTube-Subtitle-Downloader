@@ -1,0 +1,245 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="Google2SRT, download, convert, subtitles, YouTube, SRT, Closed Captions, Google, video" />
+<meta name="description" content="Google2SRT downloads and converts subtitles from YouTube and Google Video" />
+<link rel="stylesheet" href="../style.css" />
+<title>Google2SRT - Download and convert subtitles from YouTube and Google Video - Help</title>
+</head>
+<body bgcolor="#A6BFE6" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<br><br>
+<table border="0" width="100%">
+<tr>
+<td width="3%"></td>
+<td valign="top" width="84%">
+    <div class="cos">
+	<b>
+	<a href="#install" class="link2">Installation</a>&nbsp;&nbsp;&nbsp;
+	<a href="#use" class="link2">How to use</a>&nbsp;&nbsp;&nbsp;
+	<a href="#trouble" class="link2">Troubleshooting</a>&nbsp;&nbsp;&nbsp;
+	<a href="#manual_download" class="link2">Manual download</a>&nbsp;&nbsp;&nbsp;
+	</b>
+
+	<br><br><br><br>
+    <a name="install"><b>Installation</b></a><br>
+    <ol>
+	<li>Verify your system has <b>Java version 1.6 or higher</b> installed. You can download it from
+	<a href="http://www.java.com" class="link2" target="_blank">http://www.java.com</a>.</li>
+	<li><b>Run</b> the installation package for your platform or <b>decompress</b> the ZIP file.</li>
+	<li>
+	<b>That's all!</b> From now on you only need to remember that:<br>
+	a. If you use <b>Windows</b>, you should open <i><b>Google2SRT.exe</b></i> file. <img src="../img/logo.png" alt="google2srt" width="20"><br>
+	b. If you use <b>GNU/Linux</b>, you should open <i><b>run.sh</b></i> file. <img src="../img/sh.png" alt="shell script"><br>
+	c. If you use <b>Mac OS X</b>, you should open <i><b>Google2SRT.jar</b></i> file. <img src="../img/jar.png" alt="JAR file"><br>
+	d. If you use <b>another system</b>, you should run on a shell or similar this command: "<b>java -jar Google2SRT.jar</b>".
+	</li>
+	</ol>
+    <br><br>
+	<a name="use"><b>How to use</b></a><br>
+	<ul>	
+	<li><b>Change the language</b>: click on the flags: <img src="../img/ca.jpg" alt="cat">, <img src="../img/en.jpg" alt="eng">, <img src="../img/es.jpg" alt="esp">...</li>
+	<br>
+	<li><b>Choose the source</b>:<br><br>
+		<ul>
+			<li><b>Web</b>: you may provide one video address (URL) to convert subtitles from <b>one video</b>.<br></li>
+			<li><b>URL list</b>: you may provide a list of URL in a text file (one URL per line) to convert subtitles from <b>multiple videos</b>.</li>
+			<li><b>XML file</b>: you may provide a <b>single XML</b> subtitles file (manually downloaded) to convert it to SRT.</li>
+		</ul>
+	</li>
+	<br>
+	<li><b>Choose the output directory</b> where you want to save subtitles on via <b><i>SRT subtitles</i></b>.
+	<br><b>Note:</b> you should choose an empty directory. <b>Files will be overwritten</b> without asking for confirmation</b>.</li>
+	<br>
+	<li><b>Tracks</b>: select <b>what subtitles</b> you want to convert from the list:<br><br>
+	<ul>
+		<li>You may select individual subtitles.</li>
+		<li><b><i>All</i></b>: all subtitles are selected.</li>
+		<li><b><i>Invert</i></b>: current selection is inverted.</li>
+	</ul>
+	</li>
+	<br>
+	<li><b>Translations</b>: select <b>what translations</b> you want to convert from the list:<br>
+	<b>Note</b>: you must select at least one <b>source</b> from <b><i>Tracks</i></b>. <u>Suggestion</u>: avoid an ASR source when possible.
+	<br><br>
+	<ul>
+		<li>You may select individual translations.</li>
+		<li><b><i>All</i></b>: all translations are selected.</li>
+		<li><b><i>Invert</i></b>: current selection is inverted.</li>
+	</ul>
+	</li>
+	<br>
+	<li><b><i>+Track</i></b>: output file name will include the track name.</li>
+	<br>
+	<li><b><i>+Title</i></b>: output file name will include the video title.</li>
+	<br>
+	<li><b><i>Delay (seconds)</i></b>: subtitles are delayed an amount
+	of seconds (if the value is positive). You can obtain the opposite effect, move forward the subtitles, by writing negative values.<br>	
+	<b>Example</b>: if subtitles appear 6.25 seconds too early, you should delay them 6.25 seconds. If subtitles appear 3.70 seconds too
+	late, you should move them forward adding a delay of -3.70 seconds.
+	</li>
+	<br>
+	<li><b><i>Go!</i></b>: it starts conversion process. If there are many subtitles (one or two hours of video, approximately 180 KB in SRT)
+	it needs 5 seconds approximately (a single local XML file).</li>
+	<br>
+	<li><b>Usage examples</b>:</li>
+	</ul>
+	<center>
+	<table border="0">
+		<tr>
+			<td align="center">
+				<a href="../img/ss_single_URL_tracks.png"><img src="../img/ss_single_URL_tracks_s.png" border="0" alt="Subtitles from one single video (URL)" title="Subtitles from one single video (URL)"></a><br>
+				Subtitles from one single video (URL)
+			</td>
+			<td width="20px">
+			<td align="center">
+				<a href="../img/ss_single_URL_translations.png"><img src="../img/ss_single_URL_translations_s.png" border="0" alt="Translations from one single video (URL)" title="Translations from one single video (URL)"></a><br>
+				Translations from one single video (URL)
+			</td>
+		</tr>
+		<tr height="20px"><td colspan="3"/></tr>
+		<tr>
+			<td align="center">
+				<a href="../img/ss_URL_list_tracks.png"><img src="../img/ss_URL_list_tracks_s.png" border="0" alt="Subtitles from multiple videos (URL list)" title="Subtitles from multiple videos (URL list)"></a><br>
+				Subtitles from multiple videos (URL list)
+			</td>
+			<td width="20px">
+			<td align="center">
+				<a href="../img/ss_single_XML_file.png"><img src="../img/ss_single_XML_file_s.png" border="0" alt="One single XML subtitles file" title="One single XML subtitles file"></a><br>
+				One single XML subtitles file
+			</td>
+		</tr>
+	</table>
+	</center>
+	<br><br>
+	<a name="trouble"><b>Troubleshooting</b></a><br>
+	<ul>
+	<li>
+	<b>Problem</b>: I use Web method and I write a valid URL with subtitles but it doesn't appear any subtitles list,
+	appears a subtitles list but I can't convert them, I receive an unknown error or application finishes suddenly...<br>
+	<b>Solution</b>: Maybe subtitles obtaining method has changed. You should wait for a newer version or you can try to download subtitles
+	manually (being helped by an sniffer).
+	</li>
+	<br>
+	<li>
+	<b>Problem</b>: I receive meaningless error messages when an URL it's not correct or there is a network error.<br>
+	<b>Solution</b>: For now, you must be patient until appears a newer version...
+	</li>
+	</ul>
+	<br><br>
+	<a name="manual_download"><b>Manual download</b></a><br>
+	What can we do when Google2SRT cannot download the subtitles? We will have to manually download and convert them by choosing the "XML file" option.
+	<span class="vn" style="background-color:white;text-decoration:line-through">Currently, it is necessary to use this method if we want to download the subtitles that YouTube automatically translates from the original subtitles.</span><br><br>
+
+
+	<span style="font-size:14px; font-weight: bold"><i>YouTube</i></span><br>
+	Our video address is like this:<br>
+	<div class="codi"> http://www.youtube.com/watch?<b>v=<span class="vn">XraeBDMm2PM</span></b> </div><br><br>
+
+	1. We will pay attention to the <span class="codi">v</span> parameter and we will see the available <b>real</b> subtitles list by browsing this address:<br>
+	<div class="codi"> http://video.google.com/timedtext?type=list&amp;<b>v=<span class="vn">XraeBDMm2PM</span></b> </div><br><br>
+
+	2a. We will see a XML code like this:<br>
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+	&lt;transcript_list docid="6824816026201807091"&gt;<br>
+	&lt;track id="2" name="<span class="vn">French (fr)</span>" lang_code="<span class="vn">fr</span>" lang_original="Français" lang_translated="French"/&gt;<br>
+	&lt;track id="0" name="<span class="vn">German (de)</span>" lang_code="<span class="vn">de</span>" lang_original="Deutsch" lang_translated="German"/&gt;<br>
+	&lt;track id="3" name="<span class="vn">Italian (it)</span>" lang_code="<span class="vn">it</span>" lang_original="Italiano" lang_translated="Italian"/&gt;<br>
+	&lt;track id="4" name="<span class="vn">Japanese</span>" lang_code="<span class="vn">ja</span>" lang_original="日本語" lang_translated="Japanese"/&gt;<br>
+	&lt;track id="1" name="<span class="vn">Spanish (es)</span>" lang_code="<span class="vn">es</span>" lang_original="Español" lang_translated="Spanish"/&gt;<br>
+	&lt;/transcript_list&gt;
+	</div><br><br>
+
+	2b. If subtitles exist in our desired language, we can go to the <a class="link2" href="#manual_download_yt_3">step 3</a>. If they do not exist, we also can load the available <b>translated</b> subtitles list by browsing this address:<br>
+	<div class="codi"> http://video.google.com/timedtext?type=list&amp;<b>v=<span class="vn">XraeBDMm2PM</span></b>&amp;<b>tlangs=1</b> </div><br><br>
+	
+	2c. We will see a XML code like this:<br>
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+	&lt;transcript_list docid="6824816026201807091"&gt;<br>
+	&lt;<b>target</b> id="42" lang_code="<span class="vn">ca</span>" lang_original="Català" lang_translated="Catalan"/&gt;<br>
+	&lt;<b>track</b> id="2" name="<span class="vn">French (fr)</span>" lang_code="<span class="vn">fr</span>" lang_original="Français" lang_translated="French" <b>cantran="true"</b>/&gt;<br>
+	&lt;<b>track</b> id="1" name="<span class="vn">Spanish (es)</span>" lang_code="<span class="vn">es</span>" lang_original="Español" lang_translated="Spanish" <b>cantran="true"</b>/&gt;<br>
+	...<br>
+	&lt;/transcript_list&gt;<br>
+	</div><br>
+	Subtitles with <span class="codi">&lt;track&gt;</span> and <span class="codi">cantran="true"</span> are real; the other ones (with <span class="codi">&lt;target&gt;</span>) are languages which are available to translate the real subtitles to. It means that we will have to choose the real subtitle we want to use as source (for the translation) and the language that we really want. 
+	<br><br>
+
+	 <a name="manual_download_yt_3">3</a>. We will pay attention to the <span class="codi">name</span> and <span class="codi">lang_code</span> parameters of the subtitle that we are interested in and we will go to:<br>
+	Example: Spanish subtitles (<b>real subtitles</b>):<br>
+	<div class="codi"> http://video.google.com/timedtext?type=track&amp;<b>v=<span class="vn">XraeBDMm2PM</span></b>&<b>name=<span class="vn">Spanish (es)</span></b>&amp;<b>lang=<span class="vn">es</span></b> </div><br>
+
+	Example: Catalan subtitles (<b>translated subtitles from Spanish</b>):<br>
+	<div class="codi"> http://video.google.com/timedtext?type=track&amp;<b>v=<span class="vn">XraeBDMm2PM</span></b>&<b>name=<span class="vn">Spanish (es)</span></b>&amp;<b>lang=<span class="vn">es</span></b>&amp;<b>tlang=<span class="vn">ca</span></b> </div><br>
+
+	Note that <span class="codi">lang_code</span> from the previous XML file is <span class="codi">lang</span> (real subtitle) or  <span class="codi">tlang</span> (translated subtitle) in the URL address.<br>
+
+	If some of the <span class="codi">name</span> or <span class="codi">lang_code</span> parameters are empty in the XML code that appeared in the step 2/2c, i.e., there is <span class="codi">name=""</span> or <span class="codi">lang_code=""</span>, we will pass these parameters as empty parameters. <a class="link2" href="#manual_download_gv_3e">See Google Video English subtitles example</a>.<br><br>
+
+	 4. We will see a XML file like this:
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+	&lt;transcript&gt;<br>
+	&lt;text start="0" dur="1.96"&gt;El Nissan Sunny.&lt;/text&gt;<br>
+	&lt;text start="3" dur="1.48"&gt;No sé por dónde empezar&lt;/text&gt;<br>
+	&lt;text start="4.52" dur="3.96"&gt;Quiero decir que hay coches más feos y hay coches peores de conducir, pero ese no es el asunto.&lt;/text&gt;<br>
+	...<br>
+	&lt;/transcript&gt; </div><br><br>
+
+	 5. We will save it with XML extension and it is ready to be converted to SRT by Google2SRT.<br><br><br>
+
+
+	<span style="font-size:14px; font-weight: bold"><i>Google Video</i></span><br>
+
+	Our video address is like this:<br>
+	<div class="codi"> http://video.google.com/videoplay?<b>docid=<span class="vn">-3916654796029228812</span></b> </div><br><br>
+
+	1. We will pay attention to the <span class="codi">docid</span> parameter and we will see the available subtitles list by browsing this address:<br>
+	<div class="codi"> http://video.google.com/videotranscript?frame=c&amp;type=list&amp;<b>docid=<span class="vn">-3916654796029228812</span></b> </div><br><br>
+
+	 2. We will see a XML code like this:<br>
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+	&lt;transcript_list docid="<span class="vn">-3916654796029228812</span>"&gt;<br>
+	&lt;track id="4" name="<span class="vn">Deutsch</span>" lang_code="<span class="vn">de</span>" lang_original="Deutsch" lang_translated="Alemany" lang_default="true"/&gt;<br>
+	&lt;track id="2" name="<span class="vn"></span>" lang_code="<span class="vn">en</span>" lang_original="English" lang_translated="Anglès" lang_default="true"/&gt;<br>
+	&lt;track id="0" name="<span class="vn">العربية</span>" lang_code="<span class="vn">ar</span>" lang_original="العربية" lang_translated="Àrab" lang_default="true"/&gt;<br>
+	&lt;track id="9" name="<span class="vn">한국어</span>" lang_code="<span class="vn">ko</span>" lang_original="한국어" lang_translated="Coreà" lang_default="true"/&gt;<br>
+	&lt;track id="13" name="<span class="vn">Español</span>" lang_code="<span class="vn">es</span>" lang_original="español" lang_translated="Espanyol" lang_default="true"/&gt;<br>
+	&lt;track id="3" name="<span class="vn">Français</span>" lang_code="<span class="vn">fr</span>" lang_original="Français" lang_translated="Francès" lang_default="true"/&gt;<br>
+	...<br>
+	&lt;/transcript_list&gt;</div><br><br>
+
+	 3. We will pay attention to the <span class="codi">name</span> i <span class="codi">lang_code</span> parameters of the subtitle that we are interested in and we will go to:<br>
+	Example: Spanish subtitles:<br>
+	<div class="codi"> http://video.google.com/videotranscript?frame=c&amp;type=track&amp;<b>name=<span class="vn">Español</span></b>&amp;<b>lang=<span class="vn">es</span></b>&amp;<b>docid=<span class="vn">-3916654796029228812</span></b> </div><br>
+
+	<a name="manual_download_gv_3e">Example</a>: English subtitles (<span class="codi">name</span> is empty):<br>
+	<div class="codi"> http://video.google.com/videotranscript?frame=c&amp;type=track&amp;<b>name=<span class="vn"></span></b>&amp;<b>lang=<span class="vn">en</span></b>&amp;<b>docid=<span class="vn">-3916654796029228812</span></b> </div><br>
+
+	Note that <span class="codi">lang_code</span> from the previous XML file is <span class="codi">lang</span> in the URL address.<br>
+
+	If some of the <span class="codi">name</span> or <span class="codi">lang_code</span> parameters are empty in the XML code that appeared in the step 2, i.e., there is <span class="codi">name=""</span> or <span class="codi">lang_code=""</span>, we will pass these parameters as empty parameters, like in the example of the English subtitles, where <span class="codi">name</span> does not have any value.<br><br>
+
+	 4. We will see a XML file like this:
+	<div class="codi">
+	&lt;?xml version="1.0" encoding="utf-8" ?&gt;<br>
+	&lt;transcript&gt;<br>
+	&lt;text start="1.8" dur="1.95"&gt;Información sobre la amiloidosis.&lt;/text&gt;<br>
+	&lt;text start="5.06" dur="1.29"&gt;¿Qué es la amiloidosis?&lt;/text&gt;<br>
+	&lt;text start="6.69" dur="2.97"&gt;La amiloidosis es un grupo de enfermedades en las que muchas clases diferentes&lt;/text&gt;<br>
+	...<br>
+	&lt;/transcript&gt; </div><br><br>
+
+	 5. We will save it with XML extension and it is ready to be converted to SRT by Google2SRT.<br><br>
+</div>
+</td>
+<td width="3%"></td>
+</tr>
+</table>
+<br><br>
+
+</body>
+</html>
