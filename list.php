@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+<?php 
+/**
+ * Display List of Subtitles
+ */
+include_once ("youtube.php");
+if($_POST["url"]) {
+	$url = $_POST["url"];	
+} else {
+	$url = NULL;
+}
+if ($url) {
+	$source = YouTube::getSource($url);
+	$vID = YouTube::getID($url);
+	$murl = YouTube::getMagicURL($source);
+	$params = YouTube::getParams($murl);
+	$list = YouTube::getSubList($params);
+	$list = simplexml_load_string($list);
+	$query = YouTube::queryParam($params);
+
+	setrawcookie("queryparams", $params);
+}
+ ?>
+ <!DOCTYPE html>
 <html>
 <head>
 	<title>YouTube Substitle Downloader</title>
@@ -431,6 +453,7 @@ th {
   padding: 0;
 }
 	#container {width: 300px;margin:20px auto;}
+	a {display: block; background: #000; color: #fff; border-bottom: 1px solid #ddd; padding: 20px;}
 	</style>
 </head>
 <body>
@@ -440,6 +463,46 @@ th {
 		<input type="text" class="url" placeholder="YouTube video URL" name="url">
 		<input type="submit" class="submit">
 	</form>
+	<?php  if($url) { ?>
+		<header><h1>List of Subtitles</h1></header>
+  		<?php echo $url; ?>
+  		<?php print_r($list); ?>
+
+  		<h2>Available</h2>
+  		  	<?php foreach ($list->track as $key => $value) {
+  			$output = "<a href='download.php?lang=".$value["lang_code"];
+  			$output .= '&v='.$vID;
+  			if ($value["kind"]) {
+  				$output .= "&kind=".$value["kind"];
+  			}
+  			$output .= "'>". $value["lang_original"];
+  			if ($value["kind"]) {
+  				$output .= " (".$value['kind'].")";
+  			}
+  			$output .= "</a>";
+  			if ($value["lang_default"]) {
+  				$defaultlang = $value["lang_code"];
+  			}
+  			echo $output;
+  		} ?>
+		<!-- <hr> -->
+		<h6>Translated Above Subtitles to :</h6>
+  		<?php foreach ($list->target as $key => $value) {
+  			$output = "<a href='download.php?tlang=".$value["lang_code"];
+  			$output .= '&v='.$vID;
+  			$output .= '&lang='.$defaultlang;
+  			if ($value["kind"]) {
+  				$output .= "&kind=".$value["kind"];
+  			}
+  			$output .= "'>". $value["lang_original"];
+  			if ($value["kind"]) {
+  				$output .= " (".$value['kind'].")";
+  			}
+  			$output .= "</a>";
+  			echo $output;
+  		} ?>
+  		<?php ?>
+  	<?php } ?>
 </div>
 </body>
 </html>
