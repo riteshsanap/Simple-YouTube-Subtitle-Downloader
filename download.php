@@ -19,7 +19,7 @@ $source = YouTube::getSource("https://www.youtube.com/watch?v=".$_GET["v"]);
 $url = YouTube::getMagicURL($source);
 $title = YouTube::getTitle($source);
 $params = YouTube::getParams($url);
-$param = array('fmt', 'lang', 'tlang', 'kind');
+$param = array('fmt', 'lang', 'tlang', 'kind', 'name');
 foreach ($param as $key => $value) {
 	if(isset($_GET[$value])) {
 		$params[$value] = $_GET[$value];
@@ -33,7 +33,7 @@ foreach ($param as $key => $value) {
 // $params['lang'] = $_GET["lang"];
 // $params['tlang'] = $_GET["tlang"];
 // $params['kind'] = $_GET["kind"];
-
+// print_r($title);
 $output = YouTube::getSubtitleURL($params);
 
 if(!isset($title)) {
@@ -47,9 +47,14 @@ if(!isset($title)) {
 } else {
 	$filename = $title;
 }
-
+$filename .= ".srt";
 header("Content-type: text/plain");
-header("Content-Disposition: attachment; filename=".$filename.".srt");
+
+/**
+ * Added Quotes around file name so that it does not break
+ * during spaces and special characters
+ */
+header("Content-Disposition: attachment; filename='$filename'");
  
 print $output;
 // print_r($output);

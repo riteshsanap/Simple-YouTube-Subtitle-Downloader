@@ -16,8 +16,6 @@ if ($url) {
 	$list = YouTube::getSubList($params);
 	$list = simplexml_load_string($list);
 	$query = YouTube::queryParam($params);
-
-	setrawcookie("queryparams", $params);
 }
  ?>
  <!DOCTYPE html>
@@ -464,10 +462,10 @@ th {
 		<input type="submit" class="submit">
 	</form>
 	<?php  if($url) { ?>
-		<header><h1>List of Subtitles</h1></header>
+		<header><h2>List of Subtitles</h2></header>
   		<?php echo $url; ?>
   		<?php print_r($list); ?>
-
+		<?php $defaultlang = YouTube::getDefaultLang($list); ?>
   		<h2>Available</h2>
   		  	<?php foreach ($list->track as $key => $value) {
   			$output = "<a href='download.php?lang=".$value["lang_code"];
@@ -475,14 +473,17 @@ th {
   			if ($value["kind"]) {
   				$output .= "&kind=".$value["kind"];
   			}
+  			if($value["name"]) {
+  				$output .= '&name='.$value["name"];
+  			}
   			$output .= "'>". $value["lang_original"];
   			if ($value["kind"]) {
   				$output .= " (".$value['kind'].")";
   			}
-  			$output .= "</a>";
-  			if ($value["lang_default"]) {
-  				$defaultlang = $value["lang_code"];
+  			if($value["name"] !='') {
+  				$output .= " (".$value["name"].")";
   			}
+  			$output .= "</a>";
   			echo $output;
   		} ?>
 		<!-- <hr> -->

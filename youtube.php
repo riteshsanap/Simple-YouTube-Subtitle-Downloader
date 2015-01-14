@@ -1,17 +1,17 @@
 <?php 
-function httpGet($url)
-{
-    $ch = curl_init();  
+// function httpGet($url)
+// {
+//     $ch = curl_init();  
  
-    curl_setopt($ch,CURLOPT_URL,$url);
-    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-//	curl_setopt($ch,CURLOPT_HEADER, false); 
+//     curl_setopt($ch,CURLOPT_URL,$url);
+//     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+// //	curl_setopt($ch,CURLOPT_HEADER, false); 
  
-    $output=curl_exec($ch);
+//     $output=curl_exec($ch);
  
-    curl_close($ch);
-    return $output;
-}
+//     curl_close($ch);
+//     return $output;
+// }
 Class YouTube {
 	public static function getSource($url='') {
 		$ch = curl_init();  
@@ -61,7 +61,14 @@ Class YouTube {
 		 */
 		preg_match_all('/<title>(.*?)<\/title>/', $source, $matches);
 
+		/**
+		 * Remove <title> tag
+		 */
 		$title = str_replace("<title>", NULL, $matches[0]);
+
+		/**
+		 * Remove Closing </title> tag
+		 */
 		$title = str_replace("</title>", NULL, $title[0]);
 		
 		return $title;
@@ -71,6 +78,7 @@ Class YouTube {
 		/**
 		 * Concatenate all the params together and Encode the value with URLencode
 		 */
+		$url =''; // Added because PHP giving silent error of undefined variable
 		foreach ($params as $key => $value) {
 			$url .='&'.$key.'='.urlencode($value);
 		}
@@ -151,7 +159,7 @@ Class YouTube {
 		 */
 		$url .="&asrs=1&tlangs=1";
 
-		return httpGet($url);
+		return self::getSource($url);
 	}
 
 	public static function getSubtitleURL($params) {
@@ -164,7 +172,39 @@ Class YouTube {
 		
 		$url .= self::queryParam($params);
 
-		return httpGet($url);
+		return self::getSource($url);
+	}
+
+	public static function getAvailableSubs($list) {
+		return $list->track;
+	}
+
+	public static function getTransSubs($list) {
+		return $list->traget;
+	}
+
+	public static function getDefaultLang($list) {
+		/**
+		 * Get Default Language from subtitle List
+		 * Used to translate other Subs
+		 */
+		foreach ($list->track as $key => $value) {
+			if ($value["lang_default"]) {
+  				$defaultlang = $value["lang_code"];
+  			} elseif ($value["cantran"]) {
+  				$defaultlang = $value["lang_code"];
+  			}
+
+  			if($value["kind"]) {
+  				$defaultlang .= "&kind=".$value["kind"];
+  			}
+  			if($value["name"]) {
+  				$defaultlang .= "&name=".$value["name"];
+  			}
+
+		}
+
+		return $defaultlang;
 	}
 
 }
