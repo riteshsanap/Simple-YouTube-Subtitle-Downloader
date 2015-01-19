@@ -19,10 +19,8 @@ if ($url) {
 }
  ?>
  <?php include("header.php"); ?>
-	<?php  if($url) { ?>
+	<?php  if($url && $murl && $list) { ?>
 		<header><h2>List of Subtitles</h2></header>
-  		<?php echo $url; ?>
-  		<?php //print_r($list); ?>
 		<?php $defaultlang = YouTube::getDefaultLang($list); ?>
   		<h2>Available</h2>
   		<ul id="sublist">
@@ -64,5 +62,7 @@ if ($url) {
   			echo $output;
   		} ?>
   		</ul>
-  	<?php } ?>
+  	<?php } else {
+      echo "<header><h2>No Subtitles found for the video</h2></header>";
+      } ?>
 <?php include("footer.php"); ?>
