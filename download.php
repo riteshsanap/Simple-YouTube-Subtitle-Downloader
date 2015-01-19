@@ -1,20 +1,6 @@
 <?php 
 include_once("youtube.php");
-// $param = array('signature', 'expire', 'v', 'key', 'caps', 'ars_langs', 'sparams', 'tlang', 'asrs', 'lang', 'kind', 'name');
-// $params["signature"] = $_GET["signature"];
-// $params["expire"] = $_GET["expire"];
-// $params["v"] = $_GET["v"];
-// $params["key"] = $_GET["key"];
-// $params["caps"] = $_GET["caps"];
-// $params["ars_langs"] = $_GET["asr_langs"];
-// $params["asrs"] = $_GET["asrs"];
-// foreach ($param as $key => $value) {
-// 	if(isset($_GET[$value])) {
-// 		$params[$value] = $_GET[$value];
-// 	}
-// }
-// $params['fmt'] = 'srt';
-// print_r($params);
+
 $source = YouTube::getSource("https://www.youtube.com/watch?v=".$_GET["v"]);
 $url = YouTube::getMagicURL($source);
 $title = YouTube::getTitle($source);
@@ -29,11 +15,6 @@ foreach ($param as $key => $value) {
 	}
 }
 
-// $params['fmt'] = 'srt';
-// $params['lang'] = $_GET["lang"];
-// $params['tlang'] = $_GET["tlang"];
-// $params['kind'] = $_GET["kind"];
-// print_r($title);
 $output = YouTube::getSubtitleURL($params);
 
 if(!isset($title)) {
@@ -57,5 +38,5 @@ header("Content-type: text/plain");
 header("Content-Disposition: attachment; filename='$filename'");
  
 print $output;
-// print_r($output);
+
 ?>

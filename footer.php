@@ -1,7 +1,7 @@
 <div id="footer">
 	<ul>
 		<li>
-		<a href="#report">Report Bug</a>
+		<a href="https://github.com/riteshsanap/Simple-YouTube-Subtitle-Downloader/issues" target="_blank">Report Bug</a>
 		</li>
 	</ul>
 </div>
